@@ -12,8 +12,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    DatabaseHelper myDB;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +21,11 @@ public class MainActivity extends AppCompatActivity {
         addHall();
         search();
 
-        myDB = new DatabaseHelper(this);
+
 
     }
+
+
 
     private void addHall(){
         Button btnaddHall = (Button) findViewById(R.id.btnaddHall);
