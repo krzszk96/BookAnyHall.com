@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    DatabaseHelper myDB;
 
 
     @Override
@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         addHall();
         search();
+
+        myDB = new DatabaseHelper(this);
+
     }
 
     private void addHall(){
