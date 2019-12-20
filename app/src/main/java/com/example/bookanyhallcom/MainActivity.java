@@ -20,30 +20,30 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        addHall();
-//        search();
+        addHall();
+        search();
     }
-//
-//    private void addHall(){
-//        ImageView btnaddHall = (ImageView) findViewById(R.id.btnaddHall);
-//        btnaddHall.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, AddHall.class));
-//            }
-//        });
-//
-//    }
-//
-//    private void search(){
-//        ImageView btnsearch = (ImageView) findViewById(R.id.btnsearch);
-//        btnsearch.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, Search.class));
-//            }
-//        });
-//
-//    }
+
+    private void addHall(){
+        ImageView btnadd = (ImageView) findViewById(R.id.btnaddHall);
+        btnadd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AddHall.class));
+            }
+        });
+
+    }
+
+    private void search(){
+        ImageView btns = (ImageView) findViewById(R.id.btnsearch);
+        btns.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Search.class));
+            }
+        });
+
+    }
 
 }
