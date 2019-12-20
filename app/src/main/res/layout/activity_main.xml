@@ -54,6 +54,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/btnacc"
                         android:src="@drawable/icons8_account_64"
                         android:layout_width="80dp"
                         android:layout_height="80dp" />
@@ -116,6 +117,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/btnmap"
                         android:src="@drawable/icons8_maps_64"
                         android:layout_width="80dp"
                         android:layout_height="80dp" />
@@ -207,6 +209,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
+                        android:id="@+id/btnsett"
                         android:src="@drawable/icons8_settings_64"
                         android:scaleType="fitStart"
                         android:adjustViewBounds="true"

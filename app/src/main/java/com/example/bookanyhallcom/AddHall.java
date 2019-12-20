@@ -38,14 +38,13 @@ public class AddHall extends AppCompatActivity {
     }
 
     private void backToMain1(){
-        Button backbtn1 = (Button) findViewById(R.id.backbtn1);
-        backbtn1.setOnClickListener(new View.OnClickListener() {
+        Button backbtn = (Button) findViewById(R.id.backbtn1);
+        backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
     }
 
     public void AddData(){
