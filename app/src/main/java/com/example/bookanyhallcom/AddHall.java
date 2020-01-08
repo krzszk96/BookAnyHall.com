@@ -2,7 +2,7 @@ package com.example.bookanyhallcom;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -10,14 +10,46 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+
 public class AddHall extends AppCompatActivity {
 
     DatabaseHelper myDB;
     EditText editName, editStreet, editPost, editCity;
     Button btnadd;
     Button btnviewAll;
+    Intent intent;
+
+    private static String value;
+    public static String getValue() {
+        return value;
+    }
 
     @Override
+    protected void onCreate (Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_add_hall2);
+
+        backToMain1();
+
+        final EditText editText = findViewById(R.id.hname);
+        /*final EditText editText1 = findViewById(R.id.hstreet);
+        final EditText editText2 = findViewById(R.id.hpost);
+        final EditText editText3 = findViewById(R.id.hcity);*/
+        Button button = findViewById(R.id.addhallbtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                value = editText.getText().toString().trim();
+                /*value = editText1.getText().toString().trim();
+                value = editText2.getText().toString().trim();
+                value = editText3.getText().toString().trim();*/
+                Intent intent = new Intent(AddHall.this, Search.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_hall2);
@@ -35,9 +67,9 @@ public class AddHall extends AppCompatActivity {
 
         AddData();
         viewAll();
-    }
+    }*/
 
-    private void backToMain1(){
+      private void backToMain1(){
         Button backbtn = (Button) findViewById(R.id.backbtn1);
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +79,7 @@ public class AddHall extends AppCompatActivity {
         });
     }
 
-    public void AddData(){
+    /*public void AddData(){
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -97,5 +129,7 @@ public class AddHall extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(Message);
         builder.show();
-    }
+    }*/
+
+
 }
