@@ -15,14 +15,14 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        TextView receive = findViewById(R.id.tn);
+        receive = findViewById(R.id.tn);
         receive.setText(AddHall.getValue());
-        /*TextView receive1 = findViewById(R.id.ts);
-        receive1.setText(AddHall.getValue());
+        receive1 = findViewById(R.id.ts);
+        receive1.setText(AddHall.getValue1());
         TextView receive2 = findViewById(R.id.tp);
-        receive2.setText(AddHall.getValue());
+        receive2.setText(AddHall.getValue2());
         TextView receive3 = findViewById(R.id.tc);
-        receive3.setText(AddHall.getValue());*/
+        receive3.setText(AddHall.getValue3());
 
         /*@Override
         protected void onCreate(Bundle savedInstanceState) {
