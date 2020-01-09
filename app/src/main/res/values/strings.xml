@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">BookAnyHall.com</string>
+    <string name="account">Account</string>
+    <string name="maps">Account</string>
+    <string name="room">Account</string>
+    <string name="search">Account</string>
+    <string name="settings">Account</string>
+    <string name="work">Account</string>
 </resources>
