@@ -18,56 +18,53 @@ public class Search extends AppCompatActivity {
 
     DatabaseHelper myDB;
     ListView listView;
+    ArrayList<User> userList;
+    User user;
     //TextView receive,receive1,receive2,receive3;
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_search2);
 
-//        receive = findViewById(R.id.tn);
-//        receive.setText(AddHall.getValue());
-//        receive1 = findViewById(R.id.ts);
-//        receive1.setText(AddHall.getValue1());
-//        receive2 = findViewById(R.id.tp);
-//        receive2.setText(AddHall.getValue2());
-//        receive3 = findViewById(R.id.tc);
-//        receive3.setText(AddHall.getValue3());
 
-        /*@Override
-        protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);*/
-
-        ListView listView = (ListView) findViewById(R.id.ListView);
+        //ListView listView = (ListView) findViewById(R.id.listView);
         myDB = new DatabaseHelper(this);
-
-        ArrayList<String> theList = new ArrayList<>();
+        userList = new ArrayList<>();
         Cursor data = myDB.getAllData();
+        //int numRows = data.getCount();
+
+        //ArrayList<String> theList = new ArrayList<>();
+        //Cursor data = myDB.getAllData();
 
         if(data.getCount() == 0){
             Toast.makeText(Search.this, "Database empty", Toast.LENGTH_LONG).show();
         }else{
             while(data.moveToNext()){
-                theList.add(data.getString(0));
-                theList.add(data.getString(1));
-                theList.add(data.getString(2));
-                theList.add(data.getString(3));
-                theList.add(data.getString(4));
-                ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,theList);
-                listView.setAdapter(listAdapter);
+                user = new User(data.getString(0),data.getString(1),data.getString(2),data.getString(3),data.getString(4));
+                userList.add(user);
+                //theList.add(data.getString(0));
+                //theList.add(data.getString(1));
+                //theList.add(data.getString(2));
+                //theList.add(data.getString(3));
+                //theList.add(data.getString(4));
+                //ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,theList);
+                //listView.setAdapter(listAdapter);
             }
+            FiveColumn_ListAdapter adapter = new FiveColumn_ListAdapter(this, R.layout.activity_search,userList);
+            listView = (ListView) findViewById(R.id.listView);
+            listView.setAdapter(adapter);
         }
 
-        backToMain2();
+  //      backToMain2();
     }
 
-    private void backToMain2(){
-        Button backbtn2 = (Button) findViewById(R.id.backbtn2);
-        backbtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-    }
+   // private void backToMain2(){
+    //    Button backbtn2 = (Button) findViewById(R.id.backbtn2);
+     //   backbtn2.setOnClickListener(new View.OnClickListener() {
+    //        @Override
+    //        public void onClick(View v) {
+    //            finish();
+    //        }
+    //    });
+   // }
 }
