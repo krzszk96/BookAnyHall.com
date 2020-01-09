@@ -116,23 +116,7 @@ public class AddHall extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(AddHall.this, Search.class);
                         startActivity(intent);
-
-                        Cursor res =  myDB.getAllData();
-                        if(res.getCount() == 0){
-                            //show message
-                            showMessage("Error","Nothing found");
-                            return;
-                        }
-                        StringBuffer buffer = new StringBuffer();
-                        while (res.moveToNext()){
-                            buffer.append("id :"+ res.getString(0)+"\n");
-                            buffer.append("Name :"+ res.getString(1)+"\n");
-                            buffer.append("Street :"+ res.getString(2)+"\n");
-                            buffer.append("Post :"+ res.getString(3)+"\n");
-                            buffer.append("City :"+ res.getString(4)+"\n");
-                        }
-                        //show all data
-                        showMessage("Data", buffer.toString());
+                        
 
                     }
                 }
