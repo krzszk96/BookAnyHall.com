@@ -38,7 +38,7 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);*/
 
-        //ListView listView = (ListView) findViewById(R.id.ListView);
+        ListView listView = (ListView) findViewById(R.id.ListView);
         myDB = new DatabaseHelper(this);
 
         ArrayList<String> theList = new ArrayList<>();
@@ -50,6 +50,9 @@ public class Search extends AppCompatActivity {
             while(data.moveToNext()){
                 theList.add(data.getString(0));
                 theList.add(data.getString(1));
+                theList.add(data.getString(2));
+                theList.add(data.getString(3));
+                theList.add(data.getString(4));
                 ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,theList);
                 listView.setAdapter(listAdapter);
             }
