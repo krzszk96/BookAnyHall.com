@@ -116,7 +116,7 @@ public class AddHall extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(AddHall.this, Search.class);
                         startActivity(intent);
-                        
+
 
                     }
                 }

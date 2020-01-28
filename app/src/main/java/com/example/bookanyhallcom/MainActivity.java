@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnmap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Map.class));
+                startActivity(new Intent(MainActivity.this, MapsActivity.class));
             }
         });
     }
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         btnsett.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, Search.class));
+                startActivity(new Intent(MainActivity.this, Settings.class));
             }
         });
     }
