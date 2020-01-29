@@ -58,7 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Toast.makeText(MapsActivity.this, "Database empty", Toast.LENGTH_LONG).show();
         }else{
         while (data.moveToNext()){
-        LatLng address = getLocationFromAddress(this, data.getString(2));
+        LatLng address = getLocationFromAddress(this, data.getString(4) + " " + data.getString(2));
         mMap.addMarker(new MarkerOptions().position(address).title(data.getString(1)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(address));}}
     }
