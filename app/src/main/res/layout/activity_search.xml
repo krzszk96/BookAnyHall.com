@@ -6,63 +6,69 @@
     android:layout_height="match_parent"
     tools:context=".Search">
 
+
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="horizontal"
         android:weightSum="100">
+
 
         <TextView
             android:id="@+id/firstId"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_weight="20"
             android:layout_width="match_parent"
-           android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
-           android:id="@+id/secondName"
-           android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_weight="20"
+            android:id="@+id/secondName"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/thirdStreet"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_weight="20"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/fourthPost"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_weight="20"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/fifthCity"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_weight="20"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/textView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="69dp"-->
-<!--        android:text="search"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="69dp"-->
+    <!--        android:text="search"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <!--<ListView-->
     <!--android:id="@+id/ListView"-->
@@ -70,67 +76,66 @@
     <!--android:layout_height="wrap_content"/>-->
 
 
+    <!--    <TableLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:stretchColumns="*"-->
+    <!--        android:layout_marginTop="115dp"-->
+    <!--        android:layout_marginLeft="5dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:layout_editor_absoluteY="135dp">-->
 
-<!--    <TableLayout-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:stretchColumns="*"-->
-<!--        android:layout_marginTop="115dp"-->
-<!--        android:layout_marginLeft="5dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:layout_editor_absoluteY="135dp">-->
+    <!--        <TableRow-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content">-->
 
-<!--        <TableRow-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content">-->
+    <!--            <TextView android:text="#" />-->
 
-<!--            <TextView android:text="#" />-->
+    <!--            <TextView android:text="Hall Name" />-->
 
-<!--            <TextView android:text="Hall Name" />-->
+    <!--            <TextView android:text="Hall Street" />-->
 
-<!--            <TextView android:text="Hall Street" />-->
+    <!--            <TextView android:text="Hall Post" />-->
 
-<!--            <TextView android:text="Hall Post" />-->
+    <!--            <TextView android:text="Hall City" />-->
 
-<!--            <TextView android:text="Hall City" />-->
+    <!--        </TableRow>-->
 
-<!--        </TableRow>-->
+    <!--        <TableRow-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content">-->
 
-<!--        <TableRow-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content">-->
+    <!--            <TextView android:text="1" />-->
 
-<!--            <TextView android:text="1" />-->
+    <!--            <TextView android:text=""-->
+    <!--                      android:id="@+id/tn"/>-->
 
-<!--            <TextView android:text=""-->
-<!--                      android:id="@+id/tn"/>-->
+    <!--            <TextView android:text=""-->
+    <!--                      android:id="@+id/ts"/>-->
 
-<!--            <TextView android:text=""-->
-<!--                      android:id="@+id/ts"/>-->
+    <!--            <TextView android:text=""-->
+    <!--                      android:id="@+id/tp"/>-->
 
-<!--            <TextView android:text=""-->
-<!--                      android:id="@+id/tp"/>-->
+    <!--            <TextView android:text=""-->
+    <!--                      android:id="@+id/tc"/>-->
 
-<!--            <TextView android:text=""-->
-<!--                      android:id="@+id/tc"/>-->
-
-<!--        </TableRow>-->
+    <!--        </TableRow>-->
 
 
-<!--    </TableLayout>-->
+    <!--    </TableLayout>-->
 
     <!--<Button-->
-<!--        android:id="@+id/backbtn2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginLeft="20dp"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:text="back"-->
-<!--        android:background="@android:color/black"-->
-<!--        android:textColor="@android:color/white"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+    <!--        android:id="@+id/backbtn2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:layout_marginLeft="20dp"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        android:text="back"-->
+    <!--        android:background="@android:color/black"-->
+    <!--        android:textColor="@android:color/white"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

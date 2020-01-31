@@ -51,9 +51,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
         myDB = new DatabaseHelper(this);
         Cursor data = myDB.getAllData();
-        //data.moveToFirst();
-        // Add a marker in Sydney and move the camera
-        //LatLng sydney = new LatLng(52.2288213, 21.0845161);
         if(data.getCount() == 0){
             Toast.makeText(MapsActivity.this, "Database empty", Toast.LENGTH_LONG).show();
         }else{

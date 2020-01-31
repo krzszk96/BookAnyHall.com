@@ -19,47 +19,6 @@ public class AddHall extends AppCompatActivity {
     Button btnviewAll;
     Intent intent;
 
-//    private static String value,value1, value2, value3;
-//
-//    public static String getValue() {
-//        return value;
-//    }
-//    public static String getValue1() {
-//        return value1;
-//    }
-//    public static String getValue2() {
-//        return value2;
-//    }
-//    public static String getValue3() {
-//        return value3;
-//    }
-//
-//    @Override
-//    protected void onCreate (Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_add_hall2);
-//
-//        backToMain1();
-//
-//        editName = findViewById(R.id.hname);
-//        editStreet = findViewById(R.id.hstreet);
-//        editPost = findViewById(R.id.hpost);
-//        editCity = findViewById(R.id.hcity);
-//
-//        Button button = findViewById(R.id.addhallbtn);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                value = editName.getText().toString().trim();
-//                value1 = editStreet.getText().toString().trim();
-//                value2 = editPost.getText().toString().trim();
-//                value3 = editCity.getText().toString().trim();
-//                Intent intent = new Intent(AddHall.this, Search.class);
-//                startActivity(intent);
-//            }
-//
-//        });
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
